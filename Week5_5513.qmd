@@ -1,0 +1,39 @@
+---
+title: "Week5_5513"
+format: html
+---
+
+```{r}
+library(ggplot2)
+library(palmerpenguins)
+```
+## Referencing Sections 
+### Data Cleaning {#sec-cleaning}
+
+See Section @sec-cleaning for details on how the data was prepared.
+
+## Referencing Figures
+
+```{r}
+#| label: fig-bill
+#| fig-cap: "Bill length vs flipper length"
+#| lst-label: lst-penguins-code
+#| lst-cap: "Code to introduce the penguin plot"
+ggplot(penguins, aes(x = flipper_length_mm, y = bill_length_mm)) +
+  geom_point()
+```
+
+Figure @fig-bill shows the relationship between flipper length and bill length.
+
+Cross reference to @lst-penguins-code
+
+## Referencing Tables
+
+```{r}
+#| label: tbl-summary
+#| tbl-cap: "Summary statistics of the penguins dataset"
+knitr::kable(summary(penguins))
+```
+
+See Table @tbl-summary for summary statistics of the dataset.
+
